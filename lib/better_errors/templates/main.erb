@@ -697,7 +697,7 @@
         </nav>
 
         <% backtrace_frames.each_with_index do |frame, index| %>
-            <div class="frame_info" id="frame_info_<%= index %>" style="display:<% if index == 0%>block<% else %>none<%end%>;"></div>
+            <div class="frame_info" id="frame_info_<%= index %>" style="display:<% if index == 0%>block<% else %>none<%end%>;">
             <% if index == 0 %>
                             <header class="trace_info">
                     <div class="title">
@@ -730,6 +730,7 @@
                         <strong>Tip:</strong> add <code>gem "binding_of_caller"</code> to your Gemfile to enable the REPL and local/instance variable inspection.
                     </div>
                 <% end %>
+                </div>
             <% end %>
         <% end %>
     </section>
